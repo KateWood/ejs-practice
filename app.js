@@ -9,6 +9,7 @@ app.set('view engine', 'ejs')
 
 // middleware
 app.use(ejsLayouts)
+app.use('/assets', express.static(__dirname + '/assets'))
 
 // basic routes
 app.get('/', function(req, res) {
