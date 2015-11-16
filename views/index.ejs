@@ -13,10 +13,13 @@
 <body>
 	<div class="container">
 		<h1><%= title %></h1>
-		<% var x = 11 %>
-		<% if(x > 10) { %>
-			<p><%= message %></p>
-		<% } %>
+		<p><%= message %></p>
+
+		<ul>
+			<% users.forEach(function(user){ %>
+				<li><%= user.name %> - <%= user.email %></li>
+			<% }) %>
+		</ul>
 	</div>
 </body>
 </html>

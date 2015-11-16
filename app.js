@@ -11,9 +11,16 @@ app.set('view engine', 'ejs')
 
 // basic routes
 app.get('/', function(req, res) {
+	var collection = [
+		{name: "Lilly (not Juan)", email: "notjuan@gmail.com"},
+		{name: "Auntie Kate", email: "auntiekate@gmail.com"},
+		{name: "Uncle Philippe", email: "unclephilippe@gmail.com"}
+	]
+
 	var data = {
-		title: "The Home Page", 
-		message: "Boom, chakalaka!"
+		title: "The Home Page",
+		message: "Boom, chakalaka!",
+		users: collection
 	}
 	// response
 	res.render('index', data)
