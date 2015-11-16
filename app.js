@@ -1,13 +1,14 @@
 var express = require('express'),
 	app 	= express(),
-	ejs		= require('ejs')
-	port 	= process.env.PORT || 3000
+	ejs		= require('ejs'),
+	port 	= process.env.PORT || 3000,
+	ejsLayouts = require('express-ejs-layouts')
 
 // app configurations
 app.set('view engine', 'ejs')
 
 // middleware
-
+app.use(ejsLayouts)
 
 // basic routes
 app.get('/', function(req, res) {
@@ -24,6 +25,26 @@ app.get('/', function(req, res) {
 	}
 	// response
 	res.render('index', data)
+})
+
+app.get('/about', function(req, res) {
+	var data = {
+		name: "Business Name",
+		message: "This is a website for a business!",
+		other: "Here's some other information."
+	}
+	// response
+	res.render('about', data)
+})
+
+app.get('/contact', function(req, res) {
+	var data = {
+		address: "123 Main St.",
+		phone: "555-555-1234",
+		email: "contactus@email.com"
+	}
+	// response
+	res.render('contact', data)
 })
 
 app.listen(port, function() {

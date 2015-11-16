@@ -1,27 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>EJS Template Practice</title>
+<h1><%= title %></h1>
+<p><%= message %></p>
 
-	<!-- stylesheets -->
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-	<!-- javascript links -->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-</head>
-<body>
-	<% include ./partials/header.ejs %>
-	<div class="container">
-		<h1><%= title %></h1>
-		<p><%= message %></p>
-
-		<ul>
-			<% users.forEach(function(user){ %>
-				<li><%= user.name %> - <%= user.email %></li>
-			<% }) %>
-		</ul>
-	</div>
-	<% include ./partials/footer.ejs %>
-</body>
-</html>
+<ul>
+	<% users.forEach(function(user){ %>
+		<li><%= user.name %> - <%= user.email %></li>
+	<% }) %>
+</ul>
