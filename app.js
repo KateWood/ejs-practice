@@ -11,8 +11,12 @@ app.set('view engine', 'ejs')
 
 // basic routes
 app.get('/', function(req, res) {
+	var data = {
+		title: "The Home Page", 
+		message: "Boom, chakalaka!"
+	}
 	// response
-	res.render('index', {title: "The Home Page"})
+	res.render('index', data)
 })
 
 app.listen(port, function() {
