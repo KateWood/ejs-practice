@@ -10,6 +10,10 @@ app.set('view engine', 'ejs')
 // middleware
 app.use(ejsLayouts)
 app.use('/assets', express.static(__dirname + '/assets'))
+app.use(function(req, res, next) {
+	console.log('A request has been made to', req.url)
+	next()
+})
 
 // basic routes
 app.get('/', function(req, res) {
