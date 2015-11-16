@@ -4,13 +4,14 @@
 	<title>EJS Template Practice</title>
 
 	<!-- stylesheets -->
-	<style rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"></style>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
 	<!-- javascript links -->
 	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </head>
 <body>
+	<% include ./partials/header.ejs %>
 	<div class="container">
 		<h1><%= title %></h1>
 		<p><%= message %></p>
