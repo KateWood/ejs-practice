@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 // basic routes
 app.get('/', function(req, res) {
 	// response
-	res.json({message: 'It works'})
+	res.render('index')
 })
 
 app.listen(port, function() {
