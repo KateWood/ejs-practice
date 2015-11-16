@@ -12,7 +12,7 @@ app.set('view engine', 'ejs')
 // basic routes
 app.get('/', function(req, res) {
 	// response
-	res.render('index')
+	res.render('index', {title: "The Home Page"})
 })
 
 app.listen(port, function() {
